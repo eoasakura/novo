@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NORDITROPIN BY NOVO NORDISK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+		  body {
+			background:#2eaadc;
+			color:#fff;
+			padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+		  }
+			#text_container{ height: 300px; position:relative; }
+			#slider ul, #slider li{margin:0;padding:0;list-style:none;position:relative;display:block;}
+			#slider {    width:300px;	overflow:hidden; margin:0 auto; }
+			#slider img{	    border:none;	}	
+			#slider li {    width:300px;    overflow:hidden; }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+	
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+	<script src="http://vjs.zencdn.net/c/video.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe-1.2.5.js"></script>
+	<script type="text/javascript" src="js/jquery.sudoSlider.min.js"></script>
+	<script>	 
+		$(document).ready(function(){	
+				var timer;
+				settings = new Object(
+				      { 1 : { width:'10'}, 
+						2 : {  width:'7500'},      
+						3 : {  width:'17000'},
+						4 : {  width:'12000'},
+						5 : {  width:'6500'}
+				})
+				var player = _V_("video_player");
+				$("#slider").sudoSlider({
+							controlsShow: false,
+							customLink: 'a.carousel-control',
+							fade: true,
+							beforeAniFunc: function(index){												
+													if(index==1){//cara
+														player.currentTime(1);	
+													}	
+													if(index==2){//glandulas
+														player.currentTime(1.8);
+													}
+													if(index==3){//somatocrinina
+														player.currentTime(9);
+													}
+													if(index==4){//hormona
+														player.currentTime(26);
+													}
+													if(index==5){//salida
+														player.currentTime(38.5);
+													}
+													 player.play();
+													timer=settings[index].width;
+													setTimeout(function(){player.pause()},timer); 
+							}   
+				});
+			});
+			
+	</script>
+  </head>
+  <body>
+    <div id="main" class="container" style="width:1200px;">
+		<div class="clearfix">
+			<div class="leftside">
+						<center><img src="img/geringas.jpg" class="center"/></center>
+						<div id="text_container" class="clearfix">
+							  <div id="slider" >
+							  <ul>
+										<li>
+												<p>La deficiencia de hormona del crecimiento (GHD) es una enfermedad, en la cual el cuerpo del ni&ntilde;o falla al producir la cantidad adecuada de hormina del crecimiento, causando una falla en el crecimiento.</p>
+												<p>Da click en el bot&oacute;n de siguiente para ver que pasa dentro del cuerpo cuando un ni&ntilde;o tiene deficiencia de hormona del crecimiento.</p>
+												<p>O regresa al inicio y selecciona otro tema.</p>
+										</li>
+										<li> 
+												<p>En los casos de deficiencia de hormona del crecimiento, el cuerpo falla al producir suficiente hormona del crecimiento y la libera en la corriente sangu&iacute;nea.</p>
+										</li>
+										<li>
+												<p>Como resultado, solo un poco de hormona del crecimiento llega hasta el higado, lo que significa que solo un poco de IGF-1 es producido dentro del cuerpo.</p>
+										</li>
+										<li>
+												<p>Luego el torrente sangu&iacute;neo lleva cantidades insuficientes de IGF-1 y hormona del crecimiento a trav&eacute;s del cuerpo hasta los huesos largos de las piernas, los cuales tienen el mayor efecto en la altura vertical.</p>
+										</li>
+										<li>
+												<p>Sin la cantidad adecuada de hormona del crecimiento e IGF-1, los huesos de un ni&ntilde;o con GHD crecen m&aacute;s lentamente que los de un ni&ntilde;o normal.</p>
+												<p>Sin el tratamiento, la altura final de un ni&ntilde;o con GHD probablemente se mantenga debajo del potencial del ni&ntilde;o.</p>
+												<p>Con el tratamiento, sin embargo, un ni&ntilde;o con GHD puede alcanzar la altura de un adulto normal.</p>
+										</li>
+										
+							  </ul>
+							  </div>
+							  <a class="carousel-control left" href="#slider" rel="prev" id="des1">&lsaquo;</a>
+							  <a class="carousel-control center" href="#slider" rel="first" id="des2"> &#x25A0;</a>
+							  <a class="carousel-control right" href="#slider" rel="next" id="des3">&rsaquo;</a>
+						</div>
+						<center><a href="index.html"><img src="img/novo-nordisk.jpg" title="Home"/></a></center>
+			</div>
+			<div class="rightside">
+				<div class="title">
+				<p>La hormona</p>
+				<p class="bold">del crecimiento</p>
+				</div>
+				<div class="white">
+					<!-- Start EasyHtml5Video.com BODY section -->
+					
+					<div id="amination_holder">
+							<div class="intainer">
+									<video id="video_player" class="video-js vjs-default-skin"  width="380" height="650" poster="img/player2.png" preload="auto" >
+												<source type="video/mp4" src="video/video2.mp4">
+												<source type="video/webm" src="video/video2.webm">
+												<<source type="video/ogg" src="video/video2.ogv">
+									</video>
+							</div>
+						<img id="novo" src="img/norditropin.jpg" />
+					</div>
+					<!-- End EasyHtml5Video.com BODY section -->
+				</div>
+			</div>
+		</div>
+    </div> <!-- /container -->
+  </body>
+</html>

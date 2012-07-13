@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NORDITROPIN BY NOVO NORDISK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+		  body {
+			background:#2eaadc;
+			color:#fff;
+			padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+		  }
+			#text_container{ height: 300px; position:relative; }
+			#slider ul, #slider li{margin:0;padding:0;list-style:none;position:relative;display:block;}
+			#slider {    width:300px;	overflow:hidden; margin:0 auto; }
+			#slider img{	    border:none;	}	
+			#slider li {    width:300px;    overflow:hidden; }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+	
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+	<script src="http://vjs.zencdn.net/c/video.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe-1.2.5.js"></script>
+	<script type="text/javascript" src="js/jquery.sudoSlider.min.js"></script>
+	<script>	 
+		$(document).ready(function(){	
+				var timer;
+				settings = new Object(
+				      { 1 : { width:'10'}, 
+						2 : {  width:'5500'},      
+						3 : {  width:'35500'},
+						4 : {  width:'21500'},
+						5 : {  width:'26500'},
+						6 : {  width:'15000'},       
+						7 : {  width:'13000'},       
+						8 : {  width:'13500'},      
+						9 : {  width:'26500'},  
+					   10 : { width:'9000'},
+					   11 : { width:'23500'},
+					   12 : { width:'14500'},
+					   13 : { width:'9000'},
+					   14 : { width:'20500'}
+				})
+				var player = _V_("video_player");
+				$("#slider").sudoSlider({
+							controlsShow: false,
+							customLink: 'a.carousel-control',
+							fade: true,
+							beforeAniFunc: function(index){												
+													if(index==1){//inicio
+														player.currentTime(0);	
+													}	
+													if(index==2){//mano
+														player.currentTime(0);
+													}
+													if(index==3){//inyección
+														player.currentTime(5.51);
+													}
+													if(index==4){//circulación
+														player.currentTime(42);
+													}
+													if(index==5){//higado
+														player.currentTime(62);
+													}
+													if(index==6){//IFG-1
+														player.currentTime(88);
+													}
+													if(index==7){//circulacíón2
+															player.currentTime(105);
+													}
+													if(index==8){//partes hueso
+														player.currentTime(121);
+													}
+														if(index==9){//circulación hueso
+															player.currentTime(137);
+												     	}
+														if(index==10){//tipo celulas
+														player.currentTime(163);
+												     	}
+														if(index==11){//nuevas celulas
+														player.currentTime(173);
+												     	}
+														if(index==12){//crecimiento
+														player.currentTime(196);
+												     	}
+														if(index==13){//crecimiento hueso
+														player.currentTime(208);
+												     	}
+														if(index==14){//final
+														player.currentTime(214);
+												     	}
+													 player.play();
+													timer=settings[index].width;
+													setTimeout(function(){player.pause()},timer); 
+							}   
+				});
+			});
+			
+	</script>
+  </head>
+  <body>
+    <div id="main" class="container" style="width:1200px;">
+		<div class="clearfix">
+			<div class="leftside">
+						<center><img src="img/geringas.jpg" class="center"/></center>
+						<div id="text_container" class="clearfix">
+							  <div id="slider" >
+							  <ul>
+										<li>
+												<p>El tratamiento de hormona del crecimiento ayuda a un ni&ntilde;o a vencer los efectos de la deficiencia de hormona de crecimiento.</p>
+												<p>Es el 100 % id&eacute;ntico a la hormona de crecimiento natural producida por el cuerpo y debe ser inyectada con el fin de funcionar correctamente.</p>
+												<p>De click en el bot&oacuten de siguiente para ver que pasa dentro del cuerpo cuando un ni&ntilde;o toma el tratamientode la hormona de crecimiento.</p>
+												<p>O regrese al inicio y  elija un tema para saber m&aacute;s del tratamiento.</p>
+										</li>
+										<li> 
+												<p>La terapia de reemplazo de hormona de crecimiento debe ser inyectada bajo la piel a fin de alcanzar la corriente sangu&iacute;nea.</p>
+												<p>Como la hormona de crecimiento es un p&eacute;ptido (similar a una prote&iacute;na), no puede ser tomado como una p&iacute;ldora. si as&iacute fuera, las enzimas en el est&oacute;mago lo dividir&iacute;an antes de que esta entrara en la corriente sangu&iacute;nea, del mismo modo que ellos dividen las prote&iacute;nas en el alimento.</p>
+												<p>Por lo tanto la hormona de crecimiento no tendr&iacute;a ning&uacute;n efecto.</p>
+										</li>
+										<li>
+												<p>La hormona de crecimiento debe ser inyectada a trav&eacutes de la grasa. por esta via, ser&aacute; liberado en el cuerpo despacio, como deber&iacute;a ser.</p>
+												<p>Cuando la hormona de crecimiento es inyectada en el m&uacute;sculo, esto pasa por el cuerpo el sistema demasiado r&aacute;pido, y luego el ni&ntilde;o no consigue los resultados m&aacute;ximos posibles.</p>
+										</li>
+										<li>
+												<p>La hormona de crecimiento viaja por la corriente sangu&iacute;nea a todas las partes del cuerpo, incluso el h&iacute;gado, que tambi&eacute;n desempe&ntilde;a un papel importante en el crecimiento.</p>
+										</li>
+										<li>
+												<p>La hormona de crecimiento entra en el h&iacute;gado por la corriente sangu&iacute;nea y causa secreci&oacuten de la hormona llamada factor de crecimiento parecido a una insulina - 1 (IGF-1).</p>
+										</li>
+										<li>
+												<p>El IGF-1 sale del h&iacute;gado y viaja por la corriente sangu&iacute;nea.</p>
+										</li>
+										<li>
+												<p>La hormona de crecimiento viaja por la corriente sangu&iacute;nea a todas las partes del cuerpo, incluyendo los huesos largos de las piernas, los cuales influyen en la altura vertical.</p>
+										</li>
+										<li>
+												<p>Los huesos largos consisten en un eje (o diaphysis), 2 finales (o epiphyses), y 2 placas de crecimiento (o placas de epiphyseal).</p>
+										</li>
+										<li>
+												<p>La hormona de crecimiento y IGF-1 entran en los huesos largos en el eje del hueso por un juego de venas diminutas</p>
+										</li>
+										<li>
+												<p>El crecimiento tiene lugar entra el eje del hueso y los finales, en la regi&oacuten llamada placas de crecimiento</p>
+												<p>Las placas de crecimiento estan hechas de capas de c&eacutelulas de cart&iacutelago.</p>
+										</li>
+										<li>
+												<p>Ya que estas c&eacute;lulas se multiplican, las c&eacute;lulas reci&eacute;n creadas empujar los extremos del hueso hacia afuera.</p>
+										</li>
+										<li>
+												<p>Mientras tanto, las c&eacute;lulas m&aacute;s viejas se degeneran y son convertidas en hueso, a&ntilde;adiendo longitud del eje del hueso. Este proceso entero se repite varias veces.</p>
+										</li>
+										<li>
+												<p>Con el tiempo, este proceso de nuevo cart&iacute;lago y desarrollo de hueso hace que los huesos largos se pongan perceptiblemente m&aacute;s largo y  al ni&ntilde;o visiblemente m&aacute;s alto.</p>
+										</li>
+										<li>
+												<p>Despu&eacute;s de la pubertad, la actividad dentro de la placa de crecimiento reduce su velocidad, y finalmente la creaci&oacute;n de nuevas  c&eacute;lulas de cart&iacute;lago se detiene.</p>
+												<p>Las &uacute;ltimas celulas de  cartilago maduro son convertidas en hueso, hasta que la placa de crecimiento entera se vuelve  hueso.</p>
+												<p>En este punto, los finales del hueso y el eje de hueso se funden juntos, de modo que ning&uacute;n crecimiento futuro es posible.</p>
+										</li>
+							  </ul>
+							  </div>
+							  <a class="carousel-control left" href="#slider" rel="prev" id="des1">&lsaquo;</a>
+							  <a class="carousel-control center" href="#slider" rel="first" id="des2"> &#x25A0;</a>
+							  <a class="carousel-control right" href="#slider" rel="next" id="des3">&rsaquo;</a>
+						</div>
+						<center><a href="index.html"><img src="img/novo-nordisk.jpg" title="Home"/></a></center>
+			</div>
+			<div class="rightside">
+				<div class="title">
+				<p>La hormona</p>
+				<p class="bold">del crecimiento</p>
+				</div>
+				<div class="white">
+					<!-- Start EasyHtml5Video.com BODY section -->
+					
+					<div id="amination_holder">
+							<div class="intainer">
+									<video id="video_player" class="video-js vjs-default-skin"  width="380" height="650" poster="img/player.jpg" preload="auto" >
+												<source type="video/mp4" src="video/body.mp4">
+												<source type="video/webm" src="video/body.webm">
+												<<source type="video/ogg" src="video/body.ogv">
+									</video>
+							</div>
+						<img id="novo" src="img/norditropin.jpg" />
+					</div>
+					<!-- End EasyHtml5Video.com BODY section -->
+				</div>
+			</div>
+		</div>
+    </div> <!-- /container -->
+  </body>
+</html>

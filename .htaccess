@@ -1,0 +1,4 @@
+AddType video/mp4 .mp4
+AddType video/m4v .m4v
+AddType video/ogg .ogv
+AddType video/webm .webm
